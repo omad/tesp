@@ -192,7 +192,7 @@ def cli():
               help="The base logging and scripts output directory.")
 @click.option("--env", type=click.Path(exists=True, readable=True),
               help="Environment script to source.")
-@click.option("--workers", type=click.IntRange(1, 32), default=28,
+@click.option("--workers", type=int, default=28,
               help="The number of workers to request per node.")
 @click.option("--memory", default=256,
               help="The memory in GB to request per node.")
